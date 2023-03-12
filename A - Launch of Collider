@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int number ,y=0,counter=0;
+	cin>>number;
+	string d;
+	cin >>d;
+	int arr[number];
+	int arr2[number-1];
+	for (int i=0;i<number ;i++)
+	{
+		cin >>arr[i];
+	}
+	for(int x=0;x<number;x++)
+	{
+	counter=0;
+	int s =arr[x+1]-arr[x];
+	int z=s;
+	for(int a=0; a<z;a++)
+	{
+	if (d[x]=='R' && d[x+1]=='L'&&s!=0)
+	{
+	  s-=2;
+	  counter++;
+	}
+
+	
+	}
+	
+
+	arr2[x]=counter;
+		
+	}
+	sort(arr2,arr2+number);
+	
+	for (int m=0;m<number ;m++)
+	{ if(arr2[m]!=0)
+	{cout <<arr2[m];
+	return 0;
+	}
+	}
+	 cout <<-1;
+	
+}
